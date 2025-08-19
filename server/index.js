@@ -6,6 +6,7 @@ const http = require("http");
 const { initSocket } = require("./socket");
 const { sql } = require("./config/sql");
 const { connectMongo } = require("./config/mongo");
+
 console.log("ENV check:", process.env.SQL_SERVER, process.env.SQL_DB, process.env.SQL_USER);
 
 const app = express();
@@ -30,13 +31,33 @@ initSocket(server);
 
 (async () => {
   try {
+    console.log("🔄 Starting server initialization...");
+    
+    // Test SQL connection
+    console.log("🔍 Testing SQL connection...");
     await sql.authenticate();
-    await require("./models/sql").sync();
+    console.log("✅ SQL authentication successful");
+    
+    // Initialize models and associations
+    console.log("📋 Loading SQL models...");
+    const { User, Event, Score } = require("./models/sql");
+    console.log("✅ SQL models loaded successfully");
+    
+    // Connect to MongoDB
+    console.log("🔍 Connecting to MongoDB...");
     await connectMongo();
-    server.listen(process.env.PORT, () =>
-      console.log(`API running on port ${process.env.PORT}`)
-    );
+    console.log("✅ MongoDB connected");
+    
+    // Start server
+    server.listen(process.env.PORT, () => {
+      console.log(`🚀 API running on port ${process.env.PORT}`);
+      console.log("🎉 Server startup complete!");
+    });
+    
   } catch (err) {
-    console.error("Startup error:", err);
+    console.error("❌ Startup error:", err.message);
+    console.error("Error details:", err);
+    console.error("Stack trace:", err.stack);
+    process.exit(1);
   }
 })();
