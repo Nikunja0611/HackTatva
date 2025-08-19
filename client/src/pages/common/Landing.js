@@ -55,37 +55,37 @@ const Landing = () => {
     {
       title: "AI Team Matching",
       description: "Smart algorithms match participants based on skills, experience levels, and project preferences for optimal team formation.",
-      icon: "🤖",
+      icon: "",
       color: "blue-cyan"
     },
     {
       title: "Live Judging System",
       description: "Real-time evaluation with transparent scoring, automated feedback, and instant leaderboard updates.",
-      icon: "⚖️",
+      icon: "",
       color: "purple-pink"
     },
     {
       title: "Project Analytics",
       description: "Comprehensive insights into submission patterns, code quality metrics, and participant engagement levels.",
-      icon: "📊",
+      icon: "",
       color: "green-emerald"
     },
     {
       title: "Blockchain Certificates",
       description: "Immutable, verifiable digital certificates with QR codes for instant validation of achievements.",
-      icon: "🏆",
+      icon: "",
       color: "orange-red"
     },
     {
       title: "Collaboration Hub",
       description: "Integrated workspace with version control, real-time chat, file sharing, and progress tracking tools.",
-      icon: "🚀",
+      icon: "",
       color: "indigo-blue"
     },
     {
       title: "Mentorship Network",
       description: "Connect with industry experts, get guidance, and receive feedback throughout the hackathon journey.",
-      icon: "🎓",
+      icon: "",
       color: "pink-rose"
     }
   ];
@@ -102,7 +102,7 @@ const Landing = () => {
         "Sponsor management with branding integration",
         "Automated certificate generation and distribution"
       ],
-      icon: "👥",
+      icon: "",
       color: "blue-purple"
     },
     {
@@ -116,7 +116,7 @@ const Landing = () => {
         "Progress tracking with milestone celebrations",
         "Portfolio integration for showcase opportunities"
       ],
-      icon: "💻",
+      icon: "",
       color: "green-teal"
     },
     {
@@ -130,7 +130,7 @@ const Landing = () => {
         "Automated plagiarism and originality checks",
         "Instant result compilation and publishing"
       ],
-      icon: "⚖️",
+      icon: "",
       color: "purple-pink"
     }
   ];
@@ -199,7 +199,7 @@ const Landing = () => {
               <div className="logo-icon">
                 <span>H</span>
               </div>
-              <span className="logo-text">HackSphere</span>
+              <span className="logo-text">HackTatva</span>
             </div>
 
             {/* Navigation Links */}
@@ -263,11 +263,11 @@ const Landing = () => {
             
             {/* CTA Buttons */}
             <div className="hero-buttons">
-              <button className="primary-button">
+              <button className="primary-button"  onClick={() => window.location.href = '/login'}>
                 <span>Launch Your Hackathon</span>
               </button>
               
-              <button className="secondary-button">
+              <button className="secondary-button" onClick={() => window.location.href = '/login'}>
                 <span className="button-content">
                   <svg className="play-icon" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"/>
@@ -385,9 +385,9 @@ const Landing = () => {
                     <div className="preview-overlay" />
                     <div className="preview-content">
                       <div className="preview-icon">{role.icon}</div>
-                      <h4>Dashboard Preview</h4>
-                      <p>Experience intuitive design and powerful functionality</p>
-                      <button>Explore Features</button>
+                      <h4>“Empowering Innovation</h4>
+                      <p>Join us! Explore opportunities, and resources designed to help you grow.</p>
+                      <button onClick={() => window.location.href = '/login'}>Explore Features</button>
                     </div>
                     
                     <div className="preview-bg-1" />
@@ -448,7 +448,7 @@ const Landing = () => {
           </div>
           
           <div className="workflow-cta">
-            <button className="workflow-button">
+            <button className="workflow-button" onClick={() => window.location.href = '/login'}>
               Start Your Journey
             </button>
           </div>
@@ -484,7 +484,7 @@ const Landing = () => {
             <div className="footer-brand">
               <div className="footer-logo">
                 <div className="footer-logo-icon">H</div>
-                <h3>HackSphere</h3>
+                <h3>HackTatva</h3>
               </div>
               <p>
                 Empowering innovation through cutting-edge hackathon technology. 
@@ -524,7 +524,7 @@ const Landing = () => {
           </div>
           
           <div className="footer-bottom">
-            <p>© 2024 HackSphere. All rights reserved.</p>
+            <p>© 2025 HackTatva. All rights reserved.</p>
             <div className="footer-links">
               <a href="#">Privacy Policy</a>
               <a href="#">Terms of Service</a>

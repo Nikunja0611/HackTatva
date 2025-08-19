@@ -50,6 +50,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  color: #f1f5f9;
 }
 
 .logo {
@@ -74,7 +75,7 @@ body {
 .logo-text {
   font-size: 20px;
   font-weight: 700;
-  color: #f1f5f9;
+  color: #ffffff;
 }
 
 .nav-links {
@@ -117,6 +118,7 @@ body {
   justify-content: center;
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   overflow: hidden;
+  color: #f1f5f9;
 }
 
 .hero-bg {
@@ -135,6 +137,7 @@ body {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
+  color: #f1f5f9;
 }
 
 .hero-badge {
@@ -236,20 +239,23 @@ body {
   display: flex;
   justify-content: center;
   gap: 64px;
+  color: #ffffff;
 }
 
 .stat-item {
   text-align: center;
+  color: #ffffff;
 }
 
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 8px;
+  color: #ffffff;
 }
 
 .stat-label {
-  color: #64748b;
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -305,12 +311,12 @@ body {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 16px;
-  color: #f1f5f9;
+  color: #ffffff;
 }
 
 .section-header p {
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: #ffffff;
   max-width: 600px;
   margin: 0 auto;
 }
