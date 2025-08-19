@@ -1,18 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './styles/global.css';
-import NavBar from './components/NavBar';
-import Landing from './pages/Landing';
-import Events from './pages/Events';
-import Login from './pages/Login';
+import Landing from './pages/common/Landing';
+import Events from './pages/participants/Events';
+import Login from './pages/common/Login';
+import Dashboard from './pages/participants/Dashboard';
+import SubmitProject from './pages/participants/SubmitProject';
+import Leaderboard from './pages/participants/Leaderboard'; 
+import TeamManagement from './pages/participants/TeamManagement';
 
 export default function App(){
   return (
     <BrowserRouter>
-      <NavBar/>
       <Routes>
         <Route path="/" element={<Landing/>}/>
         <Route path="/events" element={<Events/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/submit-project" element={<SubmitProject/>}/>
+        <Route path="/leaderboard" element={<Leaderboard/>}/>
+        <Route path="/team-management" element={<TeamManagement/>}/>
       </Routes>
     </BrowserRouter>
   );
