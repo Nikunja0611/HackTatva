@@ -128,12 +128,6 @@
   font-size: 12px;
   color: #64748b;
 }
-#chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
 
 /* Navigation */
 .dashboard-nav {
@@ -469,30 +463,6 @@
 }
 
 /* Quick Actions */
-.chatbot-launcher {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #4cafef;
-  color: white;
-  font-size: 24px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease-in-out;
-  z-index: 9999;
-}
-
-.chatbot-launcher:hover {
-  transform: scale(1.1);
-  background-color: #007acc;
-}
-
 .quick-actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

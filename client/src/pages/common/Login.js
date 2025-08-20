@@ -35,7 +35,7 @@ export default function Login() {
       if (role === "participant") {
         navigate("/events");
       } else {
-        navigate("/create-event");
+        navigate("/organiser/dashboard");
       }
     }, 1500);
   }
