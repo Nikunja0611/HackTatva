@@ -164,7 +164,6 @@ const Events = () => {
         <div className="header-left">
           <div className="logo">
             <span className="logo-icon"></span>
-            <span className="logo-text">HackTatva</span>
           </div>
           <nav className="nav">
             <a href="#" className="nav-link">Discover Events</a>

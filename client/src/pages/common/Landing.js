@@ -197,9 +197,8 @@ const Landing = () => {
             {/* Logo */}
             <div className="logo">
               <div className="logo-icon">
-                <span>H</span>
+                <span></span>
               </div>
-              <span className="logo-text">HackTatva</span>
             </div>
 
             {/* Navigation Links */}
@@ -306,7 +305,7 @@ const Landing = () => {
       <section id="features" className="features-section">
         <div className="section-container">
           <div className="section-header">
-            <h2>Powerful <span className="gradient-text-blue">Features</span></h2>
+            <h2 class name="meee"><span className="gradient-text-blue"> Powerful Features</span></h2>
             <p>Every tool you need to create engaging, fair, and successful hackathons</p>
           </div>
 
@@ -338,7 +337,7 @@ const Landing = () => {
       <section id="platform" className="platform-section">
         <div className="section-container">
           <div className="section-header">
-            <h2>Built for <span className="gradient-text-green">Everyone</span></h2>
+            <h2> <span className="gradient-text-green">Built forEveryone</span></h2>
             <p>Tailored experiences for organizers, participants, and judges with role-specific dashboards</p>
           </div>
 
@@ -462,7 +461,7 @@ const Landing = () => {
         <div className="section-container">
           <h2>Ready to Transform Your Next Hackathon?</h2>
           <p>
-            Join thousands of organizers who trust HackSphere to deliver exceptional hackathon experiences. 
+            Join thousands of organizers who trust HackTatva to deliver exceptional hackathon experiences. 
             Get started today and see the difference.
           </p>
           

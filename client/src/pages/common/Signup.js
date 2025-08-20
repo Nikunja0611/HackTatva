@@ -212,7 +212,7 @@ export default function Signup() {
       if (formData.role === "participant") {
         navigate("/events");
       } else {
-        navigate("/create-event");
+        navigate("/organiser/dashboard");
       }
     }, 1500);
   }

@@ -576,7 +576,6 @@ const SubmitProject = () => {
         <div className="header-left">
           <div className="logo">
             <span className="logo-icon"></span>
-            <span className="logo-text">HackTatva</span>
           </div>
           <h1>Submit Your Project</h1>
         </div>

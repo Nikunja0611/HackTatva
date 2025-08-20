@@ -265,7 +265,7 @@ const Dashboard = () => {
                    Continue Project
                 </button>
                 <button onClick={() => handleJoinTeam(hackathon.id)} className="btn btn-outline">
-                  👥 Team
+                   Team
                 </button>
               </div>
             </div>
@@ -359,7 +359,7 @@ const Dashboard = () => {
                      Edit Project
                   </button>
                   <button onClick={() => handleJoinTeam(hackathon.id)} className="btn btn-outline">
-                    👥 Team
+                     Team
                   </button>
                 </>
               )}
@@ -472,7 +472,6 @@ const Dashboard = () => {
         <div className="header-left">
           <div className="logo">
             <span className="logo-icon"></span>
-            <span className="logo-text">HackTatva</span>
           </div>
           <div className="user-welcome">
             <h1>Welcome back, Alex! </h1>

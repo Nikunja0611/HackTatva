@@ -206,14 +206,14 @@ const TeamManagement = () => {
   return (
     <div>
       <style>{`
-        .team-management {
+        .teammanage-container {
           max-width: 1200px;
           margin: 0 auto;
           padding: 20px;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        .header {
+        .teammanage-header {
           background: linear-gradient(135deg, #667eea 0%, #667eea 100%);
           color: white;
           padding: 40px;
@@ -222,18 +222,18 @@ const TeamManagement = () => {
           box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
         }
 
-        .header h1 {
+        .teammanage-header h1 {
           font-size: 2rem;
           font-weight: 600;
           margin-bottom: 10px;
         }
 
-        .header p {
+        .teammanage-header p {
           font-size: 1.1rem;
           opacity: 0.9;
         }
 
-        .tab-navigation {
+        .teammanage-tab-navigation {
           display: flex;
           background: white;
           border-radius: 15px;
@@ -242,7 +242,7 @@ const TeamManagement = () => {
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
-        .tab-btn {
+        .teammanage-tab-btn {
           flex: 1;
           padding: 15px 25px;
           border: none;
@@ -254,13 +254,13 @@ const TeamManagement = () => {
           color: #666;
         }
 
-        .tab-btn.active {
+        .teammanage-tab-btn.teammanage-active {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
           box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .controls {
+        .teammanage-controls {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -268,12 +268,12 @@ const TeamManagement = () => {
           gap: 20px;
         }
 
-        .search-bar {
+        .teammanage-search-bar {
           flex: 1;
           position: relative;
         }
 
-        .search-input {
+        .teammanage-search-input {
           width: 100%;
           padding: 15px 20px 15px 50px;
           border: 2px solid #e1e5e9;
@@ -282,13 +282,13 @@ const TeamManagement = () => {
           transition: all 0.3s ease;
         }
 
-        .search-input:focus {
+        .teammanage-search-input:focus {
           outline: none;
           border-color: #667eea;
           box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        .search-icon {
+        .teammanage-search-icon {
           position: absolute;
           left: 18px;
           top: 50%;
@@ -296,7 +296,7 @@ const TeamManagement = () => {
           color: #999;
         }
 
-        .create-team-btn {
+        .teammanage-create-team-btn {
           padding: 15px 30px;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
@@ -310,19 +310,19 @@ const TeamManagement = () => {
           gap: 10px;
         }
 
-        .create-team-btn:hover {
+        .teammanage-create-team-btn:hover {
           transform: translateY(-2px);
           box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
 
-        .teams-grid {
+        .teammanage-teams-grid {
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
           gap: 25px;
           margin-bottom: 40px;
         }
 
-        .team-card {
+        .teammanage-team-card {
           background: white;
           border-radius: 20px;
           padding: 25px;
@@ -331,18 +331,18 @@ const TeamManagement = () => {
           border: 1px solid #f0f0f0;
         }
 
-        .team-card:hover {
+        .teammanage-team-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .team-header {
+        .teammanage-team-header {
           display: flex;
           align-items: center;
           margin-bottom: 20px;
         }
 
-        .team-avatar {
+        .teammanage-team-avatar {
           width: 50px;
           height: 50px;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -355,25 +355,25 @@ const TeamManagement = () => {
           margin-right: 15px;
         }
 
-        .team-info h3 {
+        .teammanage-team-info h3 {
           font-size: 1.3rem;
           font-weight: 700;
           color: #333;
           margin-bottom: 5px;
         }
 
-        .team-leader {
+        .teammanage-team-leader {
           color: #666;
           font-size: 0.9rem;
         }
 
-        .team-stats {
+        .teammanage-team-stats {
           display: flex;
           gap: 20px;
           margin-bottom: 15px;
         }
 
-        .stat {
+        .teammanage-stat {
           display: flex;
           align-items: center;
           gap: 5px;
@@ -381,7 +381,7 @@ const TeamManagement = () => {
           font-size: 0.9rem;
         }
 
-        .members-count {
+        .teammanage-members-count {
           display: flex;
           align-items: center;
           gap: 8px;
@@ -393,7 +393,7 @@ const TeamManagement = () => {
           font-weight: 600;
         }
 
-        .experience-badge {
+        .teammanage-experience-badge {
           display: inline-block;
           padding: 6px 12px;
           border-radius: 20px;
@@ -402,35 +402,35 @@ const TeamManagement = () => {
           margin-bottom: 15px;
         }
 
-        .experience-badge.beginner-friendly {
+        .teammanage-experience-badge.teammanage-beginner-friendly {
           background: #e8f5e8;
           color: #2d7d2d;
         }
 
-        .experience-badge.intermediate {
+        .teammanage-experience-badge.teammanage-intermediate {
           background: #fff3cd;
           color: #856404;
         }
 
-        .experience-badge.advanced {
+        .teammanage-experience-badge.teammanage-advanced {
           background: #f8d7da;
           color: #721c24;
         }
 
-        .team-description {
+        .teammanage-team-description {
           color: #666;
           line-height: 1.6;
           margin-bottom: 20px;
         }
 
-        .skills-list {
+        .teammanage-skills-list {
           display: flex;
           flex-wrap: wrap;
           gap: 8px;
           margin-bottom: 20px;
         }
 
-        .skill-tag {
+        .teammanage-skill-tag {
           background: #f0f0f0;
           color: #666;
           padding: 6px 12px;
@@ -439,31 +439,31 @@ const TeamManagement = () => {
           font-weight: 500;
         }
 
-        .looking-for {
+        .teammanage-looking-for {
           background: #e8f5e8;
           padding: 12px;
           border-radius: 10px;
           margin-bottom: 20px;
         }
 
-        .looking-for-title {
+        .teammanage-looking-for-title {
           font-weight: 600;
           color: #2d7d2d;
           margin-bottom: 5px;
           font-size: 0.9rem;
         }
 
-        .looking-for-roles {
+        .teammanage-looking-for-roles {
           color: #666;
           font-size: 0.9rem;
         }
 
-        .team-actions {
+        .teammanage-team-actions {
           display: flex;
           gap: 10px;
         }
 
-        .btn {
+        .teammanage-btn {
           padding: 12px 20px;
           border: none;
           border-radius: 10px;
@@ -477,32 +477,32 @@ const TeamManagement = () => {
           gap: 8px;
         }
 
-        .btn-primary {
+        .teammanage-btn-primary {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
         }
 
-        .btn-primary:hover {
+        .teammanage-btn-primary:hover {
           transform: translateY(-1px);
           box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
 
-        .btn-outline {
+        .teammanage-btn-outline {
           background: transparent;
           color: #667eea;
           border: 2px solid #667eea;
         }
 
-        .btn-outline:hover {
+        .teammanage-btn-outline:hover {
           background: #667eea;
           color: white;
         }
 
-        .members-section {
+        .teammanage-members-section {
           margin-top: 40px;
         }
 
-        .section-title {
+        .teammanage-section-title {
           font-size: 1.5rem;
           font-weight: 700;
           color: #d7d7d8ff;
@@ -512,7 +512,7 @@ const TeamManagement = () => {
           gap: 10px;
         }
 
-        .member-card {
+        .teammanage-member-card {
           background: white;
           border-radius: 15px;
           padding: 20px;
@@ -521,19 +521,19 @@ const TeamManagement = () => {
           border: 1px solid #f0f0f0;
         }
 
-        .member-card:hover {
+        .teammanage-member-card:hover {
           transform: translateY(-3px);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
         }
 
-        .member-header {
+        .teammanage-member-header {
           display: flex;
           align-items: center;
           color: #070606ff;
           margin-bottom: 15px;
         }
 
-        .member-avatar {
+        .teammanage-member-avatar {
           width: 45px;
           height: 45px;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -546,13 +546,13 @@ const TeamManagement = () => {
           margin-right: 15px;
         }
 
-        .member-bio {
+        .teammanage-member-bio {
           color: #0c0a0aff;
           line-height: 1.5;
           margin-bottom: 15px;
         }
 
-        .modal-overlay {
+        .teammanage-modal-overlay {
           position: fixed;
           top: 0;
           left: 0;
@@ -566,7 +566,7 @@ const TeamManagement = () => {
           z-index: 1000;
         }
 
-        .modal {
+        .teammanage-modal {
           background: white;
           border-radius: 20px;
           padding: 30px;
@@ -577,20 +577,20 @@ const TeamManagement = () => {
           position: relative;
         }
 
-        .modal-header {
+        .teammanage-modal-header {
           display: flex;
           justify-content: between;
           align-items: center;
           margin-bottom: 25px;
         }
 
-        .modal-title {
+        .teammanage-modal-title {
           font-size: 1.5rem;
           font-weight: 700;
           color: #333;
         }
 
-        .close-btn {
+        .teammanage-close-btn {
           position: absolute;
           top: 20px;
           right: 20px;
@@ -601,18 +601,18 @@ const TeamManagement = () => {
           color: #999;
         }
 
-        .form-group {
+        .teammanage-form-group {
           margin-bottom: 20px;
         }
 
-        .form-label {
+        .teammanage-form-label {
           display: block;
           font-weight: 600;
           color: #333;
           margin-bottom: 8px;
         }
 
-        .form-input, .form-textarea, .form-select {
+        .teammanage-form-input, .teammanage-form-textarea, .teammanage-form-select {
           width: 100%;
           padding: 12px 15px;
           border: 2px solid #e1e5e9;
@@ -621,76 +621,76 @@ const TeamManagement = () => {
           transition: all 0.3s ease;
         }
 
-        .form-input:focus, .form-textarea:focus, .form-select:focus {
+        .teammanage-form-input:focus, .teammanage-form-textarea:focus, .teammanage-form-select:focus {
           outline: none;
           border-color: #667eea;
           box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
-        .form-textarea {
+        .teammanage-form-textarea {
           resize: vertical;
           min-height: 100px;
         }
 
-        .chat-modal {
+        .teammanage-chat-modal {
           max-width: 600px;
           height: 70vh;
           display: flex;
           flex-direction: column;
         }
 
-        .chat-header {
+        .teammanage-chat-header {
           padding-bottom: 20px;
           border-bottom: 1px solid #e1e5e9;
           margin-bottom: 20px;
         }
 
-        .chat-messages {
+        .teammanage-chat-messages {
           flex: 1;
           overflow-y: auto;
           margin-bottom: 20px;
         }
 
-        .chat-message {
+        .teammanage-chat-message {
           margin-bottom: 15px;
           padding: 12px 15px;
           border-radius: 15px;
           max-width: 80%;
         }
 
-        .chat-message.own {
+        .teammanage-chat-message.teammanage-own {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
           margin-left: auto;
           border-bottom-right-radius: 5px;
         }
 
-        .chat-message.other {
+        .teammanage-chat-message.teammanage-other {
           background: #f8f9ff;
           color: #333;
           margin-right: auto;
           border-bottom-left-radius: 5px;
         }
 
-        .message-info {
+        .teammanage-message-info {
           font-size: 0.8rem;
           opacity: 0.7;
           margin-bottom: 5px;
         }
 
-        .chat-input-form {
+        .teammanage-chat-input-form {
           display: flex;
           gap: 10px;
         }
 
-        .chat-input {
+        .teammanage-chat-input {
           flex: 1;
           padding: 12px 15px;
           border: 2px solid #e1e5e9;
           border-radius: 25px;
         }
 
-        .send-btn {
+        .teammanage-send-btn {
           padding: 12px 20px;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           color: white;
@@ -699,19 +699,19 @@ const TeamManagement = () => {
           cursor: pointer;
         }
 
-        .rating {
+        .teammanage-rating {
           display: flex;
           align-items: center;
           gap: 5px;
           color: #ffa500;
         }
 
-        .last-active {
+        .teammanage-last-active {
           font-size: 0.8rem;
           color: #999;
         }
 
-        .hackathon-badge {
+        .teammanage-hackathon-badge {
           background: #e8f4ff;
           color: #0066cc;
           padding: 4px 10px;
@@ -721,31 +721,45 @@ const TeamManagement = () => {
           margin-bottom: 10px;
           display: inline-block;
         }
+
+        .teammanage-empty-state {
+          text-align: center;
+          padding: 60px 20px;
+          color: #666;
+        }
+
+        .teammanage-empty-state h3 {
+          margin-bottom: 10px;
+        }
+
+        .teammanage-empty-state p {
+          margin-bottom: 20px;
+        }
       `}</style>
 
-      <div className="team-management">
+      <div className="teammanage-container">
         {/* Header */}
-        <div className="header">
+        <div className="teammanage-header">
           <h1>Find Your Dream Team</h1>
           <p>Connect with talented individuals and create amazing projects together</p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="tab-navigation">
+        <div className="teammanage-tab-navigation">
           <button 
-            className={`tab-btn ${activeTab === 'join' ? 'active' : ''}`}
+            className={`teammanage-tab-btn ${activeTab === 'join' ? 'teammanage-active' : ''}`}
             onClick={() => setActiveTab('join')}
           >
              Join Teams
           </button>
           <button 
-            className={`tab-btn ${activeTab === 'members' ? 'active' : ''}`}
+            className={`teammanage-tab-btn ${activeTab === 'members' ? 'teammanage-active' : ''}`}
             onClick={() => setActiveTab('members')}
           >
              Find Members
           </button>
           <button 
-            className={`tab-btn ${activeTab === 'myteams' ? 'active' : ''}`}
+            className={`teammanage-tab-btn ${activeTab === 'myteams' ? 'teammanage-active' : ''}`}
             onClick={() => setActiveTab('myteams')}
           >
              My Teams
@@ -753,19 +767,19 @@ const TeamManagement = () => {
         </div>
 
         {/* Controls */}
-        <div className="controls">
-          <div className="search-bar">
-            <span className="search-icon">🔍</span>
+        <div className="teammanage-controls">
+          <div className="teammanage-search-bar">
+            <span className="teammanage-search-icon">🔍</span>
             <input
               type="text"
               placeholder="Search teams, skills, hackathons..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="search-input"
+              className="teammanage-search-input"
             />
           </div>
           <button 
-            className="create-team-btn"
+            className="teammanage-create-team-btn"
             onClick={() => setShowCreateTeamModal(true)}
           >
              Create Team
@@ -774,67 +788,67 @@ const TeamManagement = () => {
 
         {/* Teams Grid */}
         {activeTab === 'join' && (
-          <div className="teams-grid">
+          <div className="teammanage-teams-grid">
             {filteredTeams.map(team => (
-              <div key={team.id} className="team-card">
-                <div className="hackathon-badge">{team.hackathon}</div>
+              <div key={team.id} className="teammanage-team-card">
+                <div className="teammanage-hackathon-badge">{team.hackathon}</div>
                 
-                <div className="team-header">
-                  <div className="team-avatar">{team.avatar}</div>
-                  <div className="team-info">
+                <div className="teammanage-team-header">
+                  <div className="teammanage-team-avatar">{team.avatar}</div>
+                  <div className="teammanage-team-info">
                     <h3>{team.name}</h3>
-                    <div className="team-leader">Led by {team.leader}</div>
+                    <div className="teammanage-team-leader">Led by {team.leader}</div>
                   </div>
                 </div>
 
-                <div className="team-stats">
-                  <div className="stat">
+                <div className="teammanage-team-stats">
+                  <div className="teammanage-stat">
                     <span></span>
                     <span>{team.rating}</span>
                   </div>
-                  <div className="stat">
+                  <div className="teammanage-stat">
                     <span></span>
                     <span>{team.completedProjects} projects</span>
                   </div>
-                  <div className="stat">
+                  <div className="teammanage-stat">
                     <span></span>
                     <span>{team.timezone}</span>
                   </div>
                 </div>
 
-                <div className="members-count">
+                <div className="teammanage-members-count">
                   <span></span>
                   <span>{team.members}/{team.maxMembers} members</span>
                 </div>
 
-                <div className={`experience-badge ${team.experience.toLowerCase().replace(' ', '-')}`}>
+                <div className={`teammanage-experience-badge teammanage-${team.experience.toLowerCase().replace(' ', '-')}`}>
                   {team.experience}
                 </div>
 
-                <p className="team-description">{team.description}</p>
+                <p className="teammanage-team-description">{team.description}</p>
 
-                <div className="skills-list">
+                <div className="teammanage-skills-list">
                   {team.skills.map(skill => (
-                    <span key={skill} className="skill-tag">{skill}</span>
+                    <span key={skill} className="teammanage-skill-tag">{skill}</span>
                   ))}
                 </div>
 
-                <div className="looking-for">
-                  <div className="looking-for-title">Looking for:</div>
-                  <div className="looking-for-roles">{team.lookingFor.join(', ')}</div>
+                <div className="teammanage-looking-for">
+                  <div className="teammanage-looking-for-title">Looking for:</div>
+                  <div className="teammanage-looking-for-roles">{team.lookingFor.join(', ')}</div>
                 </div>
 
-                <div className="last-active">Last active: {team.lastActive}</div>
+                <div className="teammanage-last-active">Last active: {team.lastActive}</div>
 
-                <div className="team-actions">
+                <div className="teammanage-team-actions">
                   <button 
-                    className="btn btn-primary"
+                    className="teammanage-btn teammanage-btn-primary"
                     onClick={() => handleJoinTeam(team.id)}
                   >
                      Request to Join
                   </button>
                   <button 
-                    className="btn btn-outline"
+                    className="teammanage-btn teammanage-btn-outline"
                     onClick={() => openChat(team)}
                   >
                      Chat
@@ -847,61 +861,61 @@ const TeamManagement = () => {
 
         {/* Individual Members */}
         {activeTab === 'members' && (
-          <div className="members-section">
-            <h2 className="section-title">
+          <div className="teammanage-members-section">
+            <h2 className="teammanage-section-title">
               <span></span>
               Available Team Members
             </h2>
-            <div className="teams-grid">
+            <div className="teammanage-teams-grid">
               {filteredMembers.map(member => (
-                <div key={member.id} className="member-card">
-                  <div className="member-header">
-                    <div className="member-avatar">{member.avatar}</div>
-                    <div className="team-info">
+                <div key={member.id} className="teammanage-member-card">
+                  <div className="teammanage-member-header">
+                    <div className="teammanage-member-avatar">{member.avatar}</div>
+                    <div className="teammanage-team-info">
                       <h3>{member.name}</h3>
-                      <div className="team-leader">{member.experience}</div>
+                      <div className="teammanage-team-leader">{member.experience}</div>
                     </div>
                   </div>
 
-                  <div className="team-stats">
-                    <div className="stat">
+                  <div className="teammanage-team-stats">
+                    <div className="teammanage-stat">
                       <span></span>
                       <span>{member.rating}</span>
                     </div>
-                    <div className="stat">
+                    <div className="teammanage-stat">
                       <span></span>
                       <span>{member.completedProjects} projects</span>
                     </div>
-                    <div className="stat">
+                    <div className="teammanage-stat">
                       <span></span>
                       <span>{member.timezone}</span>
                     </div>
                   </div>
 
-                  <p className="member-bio">{member.bio}</p>
+                  <p className="teammanage-member-bio">{member.bio}</p>
 
-                  <div className="skills-list">
+                  <div className="teammanage-skills-list">
                     {member.skills.map(skill => (
-                      <span key={skill} className="skill-tag">{skill}</span>
+                      <span key={skill} className="teammanage-skill-tag">{skill}</span>
                     ))}
                   </div>
 
-                  <div className="looking-for">
-                    <div className="looking-for-title">Looking for:</div>
-                    <div className="looking-for-roles">{member.lookingFor}</div>
+                  <div className="teammanage-looking-for">
+                    <div className="teammanage-looking-for-title">Looking for:</div>
+                    <div className="teammanage-looking-for-roles">{member.lookingFor}</div>
                   </div>
 
-                  <div className="last-active">Last active: {member.lastActive}</div>
+                  <div className="teammanage-last-active">Last active: {member.lastActive}</div>
 
-                  <div className="team-actions">
+                  <div className="teammanage-team-actions">
                     <button 
-                      className="btn btn-primary"
+                      className="teammanage-btn teammanage-btn-primary"
                       onClick={() => alert(`Invitation sent to ${member.name}!`)}
                     >
                        Invite to Team
                     </button>
                     <button 
-                      className="btn btn-outline"
+                      className="teammanage-btn teammanage-btn-outline"
                       onClick={() => openChat({...member, leader: member.name})}
                     >
                        Chat
@@ -915,16 +929,16 @@ const TeamManagement = () => {
 
         {/* My Teams */}
         {activeTab === 'myteams' && (
-          <div className="members-section">
-            <h2 className="section-title">
+          <div className="teammanage-members-section">
+            <h2 className="teammanage-section-title">
               <span></span>
               My Teams
             </h2>
-            <div style={{textAlign: 'center', padding: '60px 20px', color: '#666'}}>
+            <div className="teammanage-empty-state">
               <h3>No teams yet</h3>
               <p>Create your first team or join an existing one to get started!</p>
               <button 
-                className="btn btn-primary" 
+                className="teammanage-btn teammanage-btn-primary" 
                 style={{marginTop: '20px'}}
                 onClick={() => setShowCreateTeamModal(true)}
               >
@@ -936,19 +950,19 @@ const TeamManagement = () => {
 
         {/* Create Team Modal */}
         {showCreateTeamModal && (
-          <div className="modal-overlay">
-            <div className="modal">
-              <button className="close-btn" onClick={() => setShowCreateTeamModal(false)}>×</button>
-              <div className="modal-header">
-                <h2 className="modal-title">Create New Team</h2>
+          <div className="teammanage-modal-overlay">
+            <div className="teammanage-modal">
+              <button className="teammanage-close-btn" onClick={() => setShowCreateTeamModal(false)}>×</button>
+              <div className="teammanage-modal-header">
+                <h2 className="teammanage-modal-title">Create New Team</h2>
               </div>
               
               <form onSubmit={handleCreateTeam}>
-                <div className="form-group">
-                  <label className="form-label">Team Name</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Team Name</label>
                   <input
                     type="text"
-                    className="form-input"
+                    className="teammanage-form-input"
                     value={newTeam.name}
                     onChange={(e) => setNewTeam({...newTeam, name: e.target.value})}
                     placeholder="Enter team name"
@@ -956,10 +970,10 @@ const TeamManagement = () => {
                   />
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Hackathon</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Hackathon</label>
                   <select
-                    className="form-select"
+                    className="teammanage-form-select"
                     value={newTeam.hackathon}
                     onChange={(e) => setNewTeam({...newTeam, hackathon: e.target.value})}
                   >
@@ -969,10 +983,10 @@ const TeamManagement = () => {
                   </select>
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Team Description</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Team Description</label>
                   <textarea
-                    className="form-textarea"
+                    className="teammanage-form-textarea"
                     value={newTeam.description}
                     onChange={(e) => setNewTeam({...newTeam, description: e.target.value})}
                     placeholder="Describe your team and project goals..."
@@ -980,10 +994,10 @@ const TeamManagement = () => {
                   />
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Maximum Team Members</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Maximum Team Members</label>
                   <select
-                    className="form-select"
+                    className="teammanage-form-select"
                     value={newTeam.maxMembers}
                     onChange={(e) => setNewTeam({...newTeam, maxMembers: parseInt(e.target.value)})}
                   >
@@ -994,10 +1008,10 @@ const TeamManagement = () => {
                   </select>
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Experience Level</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Experience Level</label>
                   <select
-                    className="form-select"
+                    className="teammanage-form-select"
                     value={newTeam.experience}
                     onChange={(e) => setNewTeam({...newTeam, experience: e.target.value})}
                   >
@@ -1007,37 +1021,37 @@ const TeamManagement = () => {
                   </select>
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Required Skills (comma separated)</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Required Skills (comma separated)</label>
                   <input
                     type="text"
-                    className="form-input"
+                    className="teammanage-form-input"
                     value={newTeam.skills}
                     onChange={(e) => setNewTeam({...newTeam, skills: e.target.value})}
                     placeholder="e.g., React, Python, UI/UX, Machine Learning"
                   />
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">Looking For (comma separated)</label>
+                <div className="teammanage-form-group">
+                  <label className="teammanage-form-label">Looking For (comma separated)</label>
                   <input
                     type="text"
-                    className="form-input"
+                    className="teammanage-form-input"
                     value={newTeam.lookingFor}
                     onChange={(e) => setNewTeam({...newTeam, lookingFor: e.target.value})}
                     placeholder="e.g., Frontend Developer, Data Scientist"
                   />
                 </div>
 
-                <div className="team-actions">
+                <div className="teammanage-team-actions">
                   <button 
                     type="button" 
-                    className="btn btn-outline"
+                    className="teammanage-btn teammanage-btn-outline"
                     onClick={() => setShowCreateTeamModal(false)}
                   >
                     Cancel
                   </button>
-                  <button type="submit" className="btn btn-primary">
+                  <button type="submit" className="teammanage-btn teammanage-btn-primary">
                      Create Team
                   </button>
                 </div>
@@ -1048,21 +1062,21 @@ const TeamManagement = () => {
 
         {/* Chat Modal */}
         {showChatModal && selectedTeam && (
-          <div className="modal-overlay">
-            <div className="modal chat-modal">
-              <button className="close-btn" onClick={() => setShowChatModal(false)}>×</button>
-              <div className="chat-header">
-                <h2 className="modal-title">Chat with {selectedTeam.name}</h2>
+          <div className="teammanage-modal-overlay">
+            <div className="teammanage-modal teammanage-chat-modal">
+              <button className="teammanage-close-btn" onClick={() => setShowChatModal(false)}>×</button>
+              <div className="teammanage-chat-header">
+                <h2 className="teammanage-modal-title">Chat with {selectedTeam.name}</h2>
                 <p style={{color: '#666', marginTop: '5px'}}>Team Leader: {selectedTeam.leader}</p>
               </div>
               
-              <div className="chat-messages">
+              <div className="teammanage-chat-messages">
                 {chatMessages.map(msg => (
                   <div 
                     key={msg.id} 
-                    className={`chat-message ${msg.sender === 'You' ? 'own' : 'other'}`}
+                    className={`teammanage-chat-message ${msg.sender === 'You' ? 'teammanage-own' : 'teammanage-other'}`}
                   >
-                    <div className="message-info">
+                    <div className="teammanage-message-info">
                       <strong>{msg.sender}</strong> • {msg.time}
                     </div>
                     <div>{msg.message}</div>
@@ -1070,15 +1084,15 @@ const TeamManagement = () => {
                 ))}
               </div>
 
-              <form onSubmit={handleSendMessage} className="chat-input-form">
+              <form onSubmit={handleSendMessage} className="teammanage-chat-input-form">
                 <input
                   type="text"
-                  className="chat-input"
+                  className="teammanage-chat-input"
                   value={chatMessage}
                   onChange={(e) => setChatMessage(e.target.value)}
                   placeholder="Type your message..."
                 />
-                <button type="submit" className="send-btn">
+                <button type="submit" className="teammanage-send-btn">
                   
                 </button>
               </form>
@@ -1089,4 +1103,5 @@ const TeamManagement = () => {
     </div>
   );
 }
+
 export default TeamManagement;
