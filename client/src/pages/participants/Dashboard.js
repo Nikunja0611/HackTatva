@@ -14,7 +14,7 @@ const Dashboard = () => {
     currentRank: 156,
     totalPoints: 2840
   });
-
+  const [isOpen, setIsOpen] = useState(false);
   const [currentHackathons] = useState([
     {
       id: 1,
@@ -492,6 +492,7 @@ const Dashboard = () => {
               <span className="user-level">Level 8 Hacker</span>
             </div>
           </div>
+          
         </div>
       </header>
 
@@ -561,7 +562,27 @@ const Dashboard = () => {
           {activeTab === 'upcoming' && renderUpcoming()}
         </div>
       </main>
+      
+
+       {/* Floating button */}
+      <div className="chatbot-launcher" onClick={() => setIsOpen(!isOpen)}>
+        💬
+      </div>
+
+      {/* Chatbot container */}
+      {isOpen && (
+        <div className="chatbot-iframe-container">
+          <iframe
+            src="https://www.chatbase.co/chatbot-iframe/uX2R6_ncAoxxJag62rRFd"
+            width="100%"
+            style={{ height: "100%", minHeight: "500px", border: "none" }}
+            frameBorder="0"
+            title="HackTatva Chatbot"
+          ></iframe>
+        </div>
+      )}
     </div>
+    
   );
 };
 
